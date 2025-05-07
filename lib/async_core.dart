@@ -58,6 +58,8 @@ Future<AppiumWebDriver> createDriver(
 
   final handler = getHandler(spec);
 
+  print('desired: ${desired.toString()}');
+
   final session = await client.send(
       handler.session.buildCreateRequest(desired: addAppiumPrefix(desired)),
       handler.session.parseCreateResponse);
