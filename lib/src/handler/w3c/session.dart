@@ -33,7 +33,7 @@ class W3cSessionHandler extends SessionHandler {
     } catch (_){
       // This case occurs when the server replied MJSONWP,
       // 200 ok plus error message in the body.
-      throw SessionNotCreatedException(500, responseValue);
+      throw SessionNotCreatedException(500, responseValue.toString());
     }
   }
 
